@@ -2,7 +2,6 @@ package stream;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.stream.Collectors;
 
 public class StreamEx {
     public static void main(String[] args) {

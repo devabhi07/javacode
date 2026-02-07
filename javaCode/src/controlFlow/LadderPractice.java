@@ -1,9 +1,7 @@
 package controlFlow;
 
-import java.util.Scanner;
-
 public class LadderPractice {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        int num1,num2,num3, max;
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter three number: ");
@@ -24,10 +22,10 @@ public class LadderPractice {
 
         int arr[] = {1, 2, 4, 6, 10};
         int target = 8;
-        int left =0,right=arr.length-1;
-        while (left < right){
+        int left = 0, right = arr.length - 1;
+        while (left < right) {
             int temp = arr[left];
-            arr[left] =arr[right];
+            arr[left] = arr[right];
             left++;
             right--;
             System.out.println(temp);

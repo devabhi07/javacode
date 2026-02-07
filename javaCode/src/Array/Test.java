@@ -1,7 +1,5 @@
 package Array;
 
-import java.lang.annotation.Target;
-
 public class Test {
 //    public static int search(int[] arr, int key){
 //        for(int i=0; i<arr.length; i++){
@@ -23,22 +21,21 @@ public class Test {
     public static void main(String[] args) {
 
 
-
         int arr[] = {1, 2, 4, 6, 10};
         int target = 8;
-        System.out.println(printArray(arr,target));
+        System.out.println(printArray(arr, target));
 
     }
 
-    static int printArray(int[] arr,int target) {
-        int n=arr.length+1;
-        int exSum=n*(n+1)/2;
-        int asum=0;
-        for(int num : arr){
+    static int printArray(int[] arr, int target) {
+        int n = arr.length + 1;
+        int exSum = n * (n + 1) / 2;
+        int asum = 0;
+        for (int num : arr) {
             asum += num;
 
         }
-        return exSum-asum;
+        return exSum - asum;
 
     }
 }

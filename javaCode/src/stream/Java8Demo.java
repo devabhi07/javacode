@@ -26,69 +26,38 @@ public class Java8Demo {
 
         // Predicate ---> Functional interface (Boolean value function)
         // Check value
-        Predicate<Integer> isEven = x -> x%2 ==0;
+        Predicate<Integer> isEven = x -> x % 2 == 0;
         System.out.println(isEven.test(4));
         Predicate<String> isWordStringWithA = x -> x.toLowerCase().startsWith("a");
         Predicate<String> isWordStringWithT = x -> x.toLowerCase().endsWith("v");
-        Predicate<String> and =isWordStringWithA.and(isWordStringWithT);
+        Predicate<String> and = isWordStringWithA.and(isWordStringWithT);
         //System.out.println(isWordStringWithA.test("Abhinav"));
-
 
 
         // Function  (Java 8)
 
-        Function<Integer,Integer> doubleIt = x -> 2*x;
-        Function<Integer,Integer> tripleIt = x -> 3*x;
-        Function<Integer,Integer> diviedIt = x-> 2/x;
-        System.out.println(diviedIt+""+tripleIt+""+diviedIt);
-
-
+        Function<Integer, Integer> doubleIt = x -> 2 * x;
+        Function<Integer, Integer> tripleIt = x -> 3 * x;
+        Function<Integer, Integer> diviedIt = x -> 2 / x;
+        System.out.println(diviedIt + "" + tripleIt + "" + diviedIt);
 
 
         //Ex
-        Predicate<Integer> predicate = x -> x % 2==0;  //hold condition
-        Function<Integer, Integer> function =x -> x*x;  //perform task
-        Consumer<Integer> consumer = x->System.out.println(x);// only take value
+        Predicate<Integer> predicate = x -> x % 2 == 0;  //hold condition
+        Function<Integer, Integer> function = x -> x * x;  //perform task
+        Consumer<Integer> consumer = x -> System.out.println(x);// only take value
         Supplier<Integer> supplier = () -> 100;
 
-        if(predicate.test(supplier.get())){
+        if (predicate.test(supplier.get())) {
             consumer.accept(function.apply(supplier.get()));
         }
 
 
-
-
-
-
-
-
-
         //Method reference --> use method without invoking & in place of lambda expression
 
-        List<String> student = Arrays.asList("Ramesh","Mahesh","Suresh");
+        List<String> student = Arrays.asList("Ramesh", "Mahesh", "Suresh");
         //student.forEach(x-> System.out.println(x));
         student.forEach(System.out::println);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

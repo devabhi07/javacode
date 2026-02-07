@@ -12,11 +12,9 @@ public class TwoSumSorted {
 
             if (sum == target) {
                 return true;   // pair found
-            }
-            else if (sum < target) {
+            } else if (sum < target) {
                 left++;        // increase sum
-            }
-            else {
+            } else {
                 right--;       // decrease sum
             }
         }
