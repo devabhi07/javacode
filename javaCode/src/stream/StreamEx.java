@@ -15,18 +15,18 @@ public class StreamEx {
         // I/P:  String s="I am learning Streams API in Java";
         // O/P: learning
 
-//        String s = "I am learning Streams API in Java";
-//        return Arrays.stream(s.split(" "))
-//                .max(Comparator.comparing(String::length)).get();
+        String s = "I am Tearning Jearning Streams API in Java";
+        return Arrays.stream(s.split(" "))
+                .max(Comparator.comparing(String::length)).get();
 
 
         // Remove duplicates from the string and return in the same order
         // I/O: String s = "dabcadefg"
         // O/P: dabcefg
 
-        String s = "dabcadefg";
-        return Arrays.stream(s.split(""))
-                .distinct()
-                .collect(Collectors.joining());
+//        String s = "dabcadefg";
+//        return Arrays.stream(s.split(""))
+//                .distinct()
+//                .collect(Collectors.joining());
     }
 }
